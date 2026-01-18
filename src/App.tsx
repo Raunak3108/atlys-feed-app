@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AuthProvider } from './context/AuthContext';
+import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import PostEditor from './components/PostEditor';
 import PostCard from './components/PostCard';
@@ -40,7 +41,7 @@ function AppContent() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
       <Header onLoginClick={openSignIn} />
 
       <main className="max-w-2xl mx-auto px-4 py-8 space-y-5">
@@ -66,8 +67,10 @@ function AppContent() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
+    </ThemeProvider>
   );
 }

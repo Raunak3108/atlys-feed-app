@@ -10,7 +10,7 @@ export default function PostCard({ post }: Props) {
   }
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-5 animate-slide-up hover:shadow-md transition-all">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 animate-slide-up hover:shadow-md transition-all">
       <div className="flex gap-4">
         <img
           src={post.avatar}
@@ -20,19 +20,19 @@ export default function PostCard({ post }: Props) {
 
         <div className="flex-1 min-w-0">
           <div className="flex flex-col mb-3">
-            <span className="font-semibold text-gray-900">{post.author}</span>
-            <span className="text-gray-400 text-sm">{post.timestamp}</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-100">{post.author}</span>
+            <span className="text-gray-400 dark:text-gray-500 text-sm">{post.timestamp}</span>
           </div>
 
           <div className="flex gap-3 mb-4">
             <span className="text-2xl flex-shrink-0">{post.emoji}</span>
-            <p className="text-gray-600 leading-relaxed">{post.content}</p>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{post.content}</p>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={showAlert}
-              className="p-2 rounded-lg text-gray-400 hover:text-red-500 hover:bg-gray-50 transition-all"
+              className="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-red-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
               title="Like"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,7 +41,7 @@ export default function PostCard({ post }: Props) {
             </button>
             <button
               onClick={showAlert}
-              className="p-2 rounded-lg text-gray-400 hover:text-primary hover:bg-gray-50 transition-all"
+              className="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
               title="Comment"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function PostCard({ post }: Props) {
             </button>
             <button
               onClick={showAlert}
-              className="p-2 rounded-lg text-gray-400 hover:text-primary hover:bg-gray-50 transition-all"
+              className="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
               title="Share"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -7,3 +7,9 @@ body {
   color: #1A1A1A;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.dark body,
+:root.dark body {
+  background-color: #1A1A1A;
+  color: #F7F7F7;
+}
