@@ -2,6 +2,6 @@
 npm install
 npm run dev
 ## Tech stack
-- React 18
+- React
 - TypeScript
 - Tailwind CSS
